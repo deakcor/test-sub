@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed = 20;
+var speed = 200;
 onready var animationPlayer := $AnimationPlayer
 onready var sprite := $SpriteContainer
 onready var timer := $Timer

@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Scenes/Objects/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/sounds/bubble.ogg" type="AudioStream" id=2]
 [ext_resource path="res://assets/player/player.png" type="Texture" id=3]
 [ext_resource path="res://assets/FX/bubbles.png" type="Texture" id=4]
+[ext_resource path="res://src/Scenes/Objects/shader_object.tres" type="Material" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Fast"
@@ -151,6 +152,7 @@ volume_db = -16.0
 [node name="SpriteContainer" type="Node2D" parent="."]
 
 [node name="Sprite" type="Sprite" parent="SpriteContainer"]
+material = ExtResource( 5 )
 position = Vector2( 45, -45 )
 texture = ExtResource( 3 )
 offset = Vector2( -44.2756, 45.4782 )

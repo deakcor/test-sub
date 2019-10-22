@@ -1,11 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Scenes/Objects/Mine.gd" type="Script" id=1]
 [ext_resource path="res://assets/enemies/mine.png" type="Texture" id=2]
 [ext_resource path="res://assets/enemies/mine-small.png" type="Texture" id=3]
 [ext_resource path="res://assets/enemies/mine-big.png" type="Texture" id=4]
+[ext_resource path="res://src/Scenes/Objects/shader_object.tres" type="Material" id=5]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=3]
 radius = 11.5
 
 [node name="Mine" type="Area2D"]
@@ -13,14 +14,17 @@ script = ExtResource( 1 )
 
 [node name="mine" type="Sprite" parent="."]
 visible = false
+material = ExtResource( 5 )
 texture = ExtResource( 2 )
 
 [node name="mine-small" type="Sprite" parent="."]
+material = ExtResource( 5 )
 texture = ExtResource( 3 )
 
 [node name="mine-big" type="Sprite" parent="."]
 visible = false
+material = ExtResource( 5 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 3 )
